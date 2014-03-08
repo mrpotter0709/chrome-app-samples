@@ -20,4 +20,13 @@ chrome.app.runtime.onLaunched.addListener(function() {
       top: Math.round((screenHeight-height)/2)
     }
   });
+  
+//Create a simple text notification:
+  var notification = webkitNotifications.createNotification(
+    'icon_128.png',  // icon url - can be relative
+    'Hello!',  // notification title
+    'Lorem ipsum...'  // notification body text
+  );
+//Then show the notification.
+  notification.show();
 });
